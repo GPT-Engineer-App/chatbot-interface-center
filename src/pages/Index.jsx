@@ -1,5 +1,5 @@
 import { Container, VStack, Box, Text, Input, Button, useToast, Icon } from "@chakra-ui/react";
-import { FaUser, FaRobot, FaPaperPlane } from "react-icons/fa";
+import { FaUser, FaGavel, FaPaperPlane } from "react-icons/fa";
 import { useState } from "react";
 
 const Index = () => {
@@ -32,7 +32,7 @@ const Index = () => {
         <Box width="100%" p={4} bg="gray.100" borderRadius="lg" boxShadow="md" height="66vh" overflowY="auto">
           {messages.map((message, index) => (
             <Text key={index} alignSelf={message.sender === "user" ? "flex-end" : "flex-start"} bg={message.sender === "user" ? "blue.100" : "green.100"} p={2} borderRadius="md" m={1} display="flex" alignItems="center">
-              <Icon as={message.sender === "user" ? FaUser : FaRobot} mr={2} />
+              <Icon as={message.sender === "user" ? FaUser : FaGavel} mr={2} />
               {message.text}
             </Text>
           ))}
